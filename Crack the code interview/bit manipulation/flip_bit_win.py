@@ -1,3 +1,4 @@
+#call with flip_bit_win(bin(#))
 def flip_bit_win(num):
     #store each sequence of ones in array.
     seq = []
