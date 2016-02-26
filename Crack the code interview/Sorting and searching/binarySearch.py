@@ -15,9 +15,16 @@ def binarySearch(theList,num):
     return False
         
 
-def binarySearchRecursive(theList,num,low,high):
-    if low>high:
-        return False
-    mid = (low+high)/2
-                
-            
+
+#list must be PRESORTED                
+def binarySearchRecursive(theList, num,low,high):
+	if (high < low):
+            return False
+	
+        mid = low + ((high - low) / 2)
+        if theList[mid] > num:
+            return binarySearchRecursive(theList, num, low, mid-1)
+        elif theList[mid] < num:
+            return binarySearchRecursive(theList, num, mid+1, high)
+        else:
+            return True            
