@@ -12,4 +12,4 @@ def str_compress(s):
     return newStr
         
     
-    
+print str_compress("hi")
